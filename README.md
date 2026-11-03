@@ -16,14 +16,13 @@ The calculation engine (`public/js/model.js`) is shared by the browser and the A
 Needs Node 18.17+ and has no dependencies.
 
 ```bash
-cd cea
-npm start        # http://localhost:3000, simulations saved to cea/data/simulations.json
+npm start        # http://localhost:3000, simulations saved to data/simulations.json
 npm test
 ```
 
 ## Deploy on Vercel
 
-1. In Vercel, choose **Add New → Project**, import this repository and set **Root Directory** to `cea`. Leave Framework Preset as *Other* (`vercel.json` handles the rest).
+1. In Vercel, choose **Add New → Project**, import this repository and click **Deploy**. No settings needed (`vercel.json` handles everything).
 2. To store simulations, go to **Storage → Marketplace → Upstash for Redis**, create a free database and **connect it to the project**. This sets `KV_REST_API_URL` and `KV_REST_API_TOKEN` for you. Then redeploy.
 3. Open the site. The pill at the top right says **Cloud** once storage is connected.
 
